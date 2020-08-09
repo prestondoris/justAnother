@@ -1,0 +1,9 @@
+.pageContents {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+  width: 75%;
+  margin: 0 auto 0 auto;
+  padding: .5em;
+}
