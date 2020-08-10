@@ -1,5 +1,5 @@
 #timerBox {
-  width: 50%;
+  width: 50em;
   height: 300px;
   border-radius: 20px;
   border: solid 1px #cfcfcf;
@@ -11,7 +11,6 @@
 #timerBox header {
   display: flex;
   align-items: center;
-  flex-direction: row;
   justify-content: space-around;
   border-bottom: solid 1px #cfcfcf;
   height: 15%;
@@ -21,24 +20,20 @@
 
 #timerBox main {
   display: flex;
+  justify-content: left;
   flex-direction: row;
-  justify-content: right;
   align-items: flex-end;
-  font-size: 10em;
+  font-size: 8em;
   height: 70%;
 }
 
 #timerBox footer {
   display: flex;
+  justify-content: left;
   flex-direction: row;
-  align-items: center;
-  justify-content: right;
+  align-items: flex-end;
   border-top: solid 1px #cfcfcf;
   height: 15%;
-}
-
-footer div {
-  padding: 1em;
 }
 
 button {
