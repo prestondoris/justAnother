@@ -1,0 +1,53 @@
+#timerBox {
+  width: 50%;
+  height: 300px;
+  border-radius: 20px;
+  border: solid 1px #cfcfcf;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+#timerBox header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-around;
+  border-bottom: solid 1px #cfcfcf;
+  height: 15%;
+  color: #7510F6;
+  font-size: 2em;
+}
+
+#timerBox main {
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: flex-end;
+  font-size: 10em;
+  height: 70%;
+}
+
+#timerBox footer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: right;
+  border-top: solid 1px #cfcfcf;
+  height: 15%;
+}
+
+footer div {
+  padding: 1em;
+}
+
+button {
+  font-size: 1.25em;
+  display: inline-block;
+  width: 5em;
+  height: 1.5em;
+  border: solid 1px #cfcfcf;
+  border-radius: 5px;
+  margin: .25em .5em .25em .5em;
+  box-shadow: none;
+}

@@ -18,15 +18,15 @@ function Card({cards}) {
     alignItems: 'center',
     justifyContent: 'space-around',
     borderRadius: '10px',
-    border: 'solid black 1px'
+    boxShadow: '0px 0px 10px #cfcfcf',
+    textDecoration: 'none'
   }
   let linkStyles = {
-    textDecoration: 'none',
     color: '#7510F6',
     fontSize: '1.5em'
   }
   let card = cards.map((card,ind) => (
-    <div key={ind} style={cardStyles}><Link style={linkStyles} to={'/' + card}>{card}</Link></div>
+    <Link to={'/' + card} key={ind} style={cardStyles}><p style={linkStyles}>{card}</p></Link>
   ))
   return (
     <div style={wrapperStyles}>
