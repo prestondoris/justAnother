@@ -4,41 +4,35 @@ import './Calculator.css'
 class Calculator extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      calculatedValue: '0'
+      
+    }
   }
 
   render() {
+    let values = ['headher', 'C', '()', '%', '*',
+                        '7', '8', '9', '/',
+                        '4', '5', '6', '+',
+                        '1', '2', '3', '-',
+                        '0', '.', '=']
+
+    let calcSections = values.map((val, ind) => {
+      if(ind === 0){
+        return <div className="header area" key={ind}>{val}</div>
+      } else if (ind === 17) {
+        return <div className="b17 area" key={ind}>{val}</div>
+      } else {
+        return <div className="area" key={ind}>{val}</div>
+      }
+    })
+
     return (
       <main>
-        <div className='header area'>header</div>
-        <div className='area'>C</div>
-        <div className='area'>+/-</div>
-        <div className='area'>%</div>
-        <div className='area'>*</div>
-        <div className='area'>7</div>
-        <div className='area'>8</div>
-        <div className='area'>9</div>
-        <div className='area'>/</div>
-        <div className='area'>4</div>
-        <div className='area'>5</div>
-        <div className='area'>6</div>
-        <div className='area'>+</div>
-        <div className='area'>1</div>
-        <div className='area'>2</div>
-        <div className='area'>3</div>
-        <div className='area'>-</div>
-        <div className='b17 area'>0</div>
-        <div className='area'>.</div>
-        <div className='area'>=</div>
+        {calcSections}
       </main>
     )
   }
-}
-
-function CalculatorRow(props) {
-  return (
-    <div>{props.children}</div>
-    
-  )
 }
 
 export default Calculator
