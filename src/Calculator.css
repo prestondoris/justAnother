@@ -1,0 +1,23 @@
+main {
+  display: grid;
+  grid-template-columns: 100px 100px 100px 100px;
+  grid-template-rows: 125px 100px 100px 100px 100px 100px;
+}
+
+.header {
+  grid-area: 'header';
+  grid-column-start: 1;
+  grid-column-end: 5;
+  grid-row-start: 1;
+  grid-row-end: 1;
+}
+
+.b17 {
+  grid-area: 'b13';
+  grid-column-start: 1;
+  grid-column-end: 4;
+}
+
+.area {
+  border: solid black 1px;
+}
