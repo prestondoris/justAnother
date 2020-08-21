@@ -18,7 +18,7 @@ import './AppBody.css'
 */
 function AppBody() {
   return (
-    <div class='pageContents'>
+    <div className='pageContents'>
       <Switch>
         <Route exact path="/">
           <Home />

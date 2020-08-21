@@ -12,9 +12,9 @@ function Navbar() {
           <Link id="homeLink" to="/">Just Another...</Link>
         </p>
         <ul>
-          <li><Link class="pageLinks" to="/Calculator">Calculator</Link></li>
+          <li><Link className="pageLinks" to="/Calculator">Calculator</Link></li>
           
-          <li><Link class="pageLinks" to="/Stopwatch">Stopwatch</Link></li>
+          <li><Link className="pageLinks" to="/Stopwatch">Stopwatch</Link></li>
         </ul>
       </div>
     </nav>
