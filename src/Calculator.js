@@ -118,7 +118,9 @@ class Calculator extends Component {
     return (
       <main>
         <CalculatorHeader 
-            classes='header area' 
+            mainClass='header area' 
+            operationClass='operation'
+            displayClass='display'
             fullOperation={this.state.fullOperation} 
             displayValue={this.state.displayValue} 
         />

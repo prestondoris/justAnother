@@ -20,3 +20,23 @@ main {
 .area {
   border: solid black 1px;
 }
+
+.operation {
+    height: 20%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    flex-direction: column-reverse;
+}
+
+.display {
+    height: 80%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: right;
+    flex-direction: column-reverse;
+}
+
+.display span {
+  font-size: 4em;
+}
