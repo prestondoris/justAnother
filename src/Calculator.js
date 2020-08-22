@@ -1,5 +1,6 @@
 import React, {Component} from 'react'
 import './Calculator.css'
+import CalculatorButton from './CalculatorButton'
 
 class Calculator extends Component {
   constructor(props) {
@@ -40,7 +41,6 @@ class Calculator extends Component {
     } else if (buttonClicked === '=') {
       let inputValues = this.state.inputValues.map(val => val)
       inputValues.push(Number(this.state.displayValue))
-      console.log(inputValues)
       let answer = this.performOperation(inputValues)
       let fullOperation = this.state.fullOperation + this.state.displayValue + '=' + answer
       this.setState({ displayValue: `${answer}`, fullOperation, inputValues: [] })
@@ -98,11 +98,11 @@ class Calculator extends Component {
 
     let calcSections = values.map((val, ind) => {
       if(ind === 0){
-      return <div className="header area" key={ind}><div>{this.state.fullOperation}</div>{this.state.displayValue}</div>
+        return <div className="header area" key={ind}><div>{this.state.fullOperation}</div>{this.state.displayValue}</div>
       } else if (ind === 17) {
-        return <div className="b17 area" onClick={this.buttonClick} key={ind}><input className='value' type='hidden' value={val} />{val}</div>
+        return <CalculatorButton classes='b17 area' buttonClick={this.buttonClick} val={val} key={ind} /> 
       } else {
-        return <div className="area" onClick={this.buttonClick} key={ind}><input className='value' type='hidden' value={val} />{val}</div>
+        return <CalculatorButton classes='area' buttonClick={this.buttonClick} val={val} key={ind} /> 
       }
     })
 
@@ -113,5 +113,7 @@ class Calculator extends Component {
     )
   }
 }
+
+
 
 export default Calculator
