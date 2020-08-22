@@ -1,6 +1,7 @@
 import React, {Component} from 'react'
 import './Calculator.css'
 import CalculatorButton from './CalculatorButton'
+import CalculatorHeader from './CalculatorHeader'
 
 class Calculator extends Component {
   constructor(props) {
@@ -90,25 +91,38 @@ class Calculator extends Component {
   }
 
   render() {
-    let values = ['headher', 'C', '+ / -', '%', '*',
+    let values = ['C', '+ / -', '%', '*',
                         '7', '8', '9', '/',
                         '4', '5', '6', '+',
                         '1', '2', '3', '-',
                         '0', '.', '=']
 
-    let calcSections = values.map((val, ind) => {
-      if(ind === 0){
-        return <div className="header area" key={ind}><div>{this.state.fullOperation}</div>{this.state.displayValue}</div>
-      } else if (ind === 17) {
-        return <CalculatorButton classes='b17 area' buttonClick={this.buttonClick} val={val} key={ind} /> 
+    let calcButtons = values.map((val, ind) => {
+      if (ind === 16) {
+        return <CalculatorButton 
+                  classes='b17 area' 
+                  buttonClick={this.buttonClick} 
+                  val={val} 
+                  key={ind} 
+                /> 
       } else {
-        return <CalculatorButton classes='area' buttonClick={this.buttonClick} val={val} key={ind} /> 
+        return <CalculatorButton 
+                  classes='area' 
+                  buttonClick={this.buttonClick} 
+                  val={val} 
+                  key={ind} 
+                /> 
       }
     })
 
     return (
       <main>
-        {calcSections}
+        <CalculatorHeader 
+            classes='header area' 
+            fullOperation={this.state.fullOperation} 
+            displayValue={this.state.displayValue} 
+        />
+        {calcButtons}
       </main>
     )
   }
