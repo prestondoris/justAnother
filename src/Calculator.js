@@ -22,25 +22,34 @@ class Calculator extends Component {
     let operations = ['+', '-', '*', '/', '%']
 
     if(numbers.indexOf(buttonClicked) > -1) {
-      let displayValue = this.state.displayValue === '0' ? buttonClicked : this.state.displayValue + buttonClicked      
-      this.setState({ displayValue, lastButtonClicked: 1})
+      if(this.state.lastButtonClicked === 'equals') {
+        let displayValue = buttonClicked
+        this.setState({inputValues: [], displayValue, fullOperation: '', lastButtonClicked: 'number'})
+      } else {
+        let displayValue = this.state.displayValue === '0' ? buttonClicked : this.state.displayValue + buttonClicked
+        this.setState({ displayValue, lastButtonClicked: 'number' })
+      }
+
 
     } else if (operations.indexOf(buttonClicked) > -1) {
       let inputValues = this.state.inputValues.map(val => val)
       let curOperation = operations[operations.indexOf(buttonClicked)]
       let fullOperation = this.state.fullOperation
 
-      if(this.state.lastButtonClicked === 0) {
+      if(this.state.lastButtonClicked === 'operation') {
         inputValues.pop()
         inputValues.push(curOperation)
         fullOperation = fullOperation.slice(0,-1) + curOperation
+      } else if(this.state.lastButtonClicked === 'equals') {
+        inputValues.push(Number(this.state.displayValue), curOperation)
+        fullOperation = this.state.displayValue + curOperation
       } else {
         inputValues.push(Number(this.state.displayValue), curOperation)
         fullOperation += this.state.displayValue + curOperation
       }
 
       console.log(fullOperation, inputValues)
-      this.setState({ inputValues, displayValue: '0', fullOperation, lastButtonClicked: 0 })
+      this.setState({ inputValues, displayValue: '0', fullOperation, lastButtonClicked: 'operation' })
 
     } else if (buttonClicked === '+ / -'){
       let displayValue = this.state.displayValue;
@@ -54,7 +63,7 @@ class Calculator extends Component {
       inputValues.push(Number(this.state.displayValue))
       let answer = this.performOperation(inputValues)
       let fullOperation = this.state.fullOperation + this.state.displayValue + '=' + answer
-      this.setState({ displayValue: `${answer}`, fullOperation, inputValues: [] })
+      this.setState({ displayValue: `${answer}`, fullOperation, inputValues: [], lastButtonClicked: 'equals' })
 
     } else if(buttonClicked === 'C') {
       this.setState({
