@@ -19,7 +19,7 @@ class Calculator extends Component {
   buttonClick(e) {
     let buttonClicked = e.target.children[0].value
     let numbers = ['.','1','2','3','4','5','6','7','8','9','0']
-    let operations = ['+', '-', '*', '/', '%']
+    let operations = ['+', '-', '*', '/']
 
     if(numbers.indexOf(buttonClicked) > -1) {
       if(this.state.lastButtonClicked === 'equals') {
@@ -57,7 +57,14 @@ class Calculator extends Component {
 
       this.setState({displayValue})
 
-    } else if (buttonClicked === '=') {
+    } else if (buttonClicked === '%') {
+      let displayValue = this.state.displayValue;
+      if(displayValue !== '0') {
+        displayValue = '' + Number(displayValue)/100
+      }
+
+      this.setState({displayValue})
+    }else if (buttonClicked === '=') {
       let inputValues = this.state.inputValues.map(val => val)
       inputValues.push(Number(this.state.displayValue))
       let answer = this.performOperation(inputValues)
