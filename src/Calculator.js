@@ -48,7 +48,6 @@ class Calculator extends Component {
         fullOperation += this.state.displayValue + curOperation
       }
 
-      console.log(fullOperation, inputValues)
       this.setState({ inputValues, displayValue: '0', fullOperation, lastButtonClicked: 'operation' })
 
     } else if (buttonClicked === '+ / -'){
