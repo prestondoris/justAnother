@@ -9,7 +9,8 @@ class Calculator extends Component {
     this.state = {
       displayValue: '0',
       fullOperation: '',
-      inputValues: []
+      inputValues: [],
+      lastButtonClicked: null // 1 for number, 0 for operation
     }
     this.buttonClick = this.buttonClick.bind(this)
     this.performOperation = this.performOperation.bind(this)
@@ -21,16 +22,25 @@ class Calculator extends Component {
     let operations = ['+', '-', '*', '/', '%']
 
     if(numbers.indexOf(buttonClicked) > -1) {
-      let displayValue = this.state.displayValue === '0' ? buttonClicked : this.state.displayValue + buttonClicked
-      this.setState({ displayValue})
+      let displayValue = this.state.displayValue === '0' ? buttonClicked : this.state.displayValue + buttonClicked      
+      this.setState({ displayValue, lastButtonClicked: 1})
 
     } else if (operations.indexOf(buttonClicked) > -1) {
-      let curOperation = operations[operations.indexOf(buttonClicked)]
       let inputValues = this.state.inputValues.map(val => val)
-      inputValues.push(Number(this.state.displayValue), curOperation)
+      let curOperation = operations[operations.indexOf(buttonClicked)]
+      let fullOperation = this.state.fullOperation
 
-      let fullOperation = this.state.fullOperation + this.state.displayValue + curOperation
-      this.setState({ inputValues, displayValue: '0', fullOperation })
+      if(this.state.lastButtonClicked === 0) {
+        inputValues.pop()
+        inputValues.push(curOperation)
+        fullOperation = fullOperation.slice(0,-1) + curOperation
+      } else {
+        inputValues.push(Number(this.state.displayValue), curOperation)
+        fullOperation += this.state.displayValue + curOperation
+      }
+
+      console.log(fullOperation, inputValues)
+      this.setState({ inputValues, displayValue: '0', fullOperation, lastButtonClicked: 0 })
 
     } else if (buttonClicked === '+ / -'){
       let displayValue = this.state.displayValue;
