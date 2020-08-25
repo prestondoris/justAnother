@@ -14,10 +14,16 @@ class Calculator extends Component {
     }
     this.buttonClick = this.buttonClick.bind(this)
     this.performOperation = this.performOperation.bind(this)
+    this.roundValue = this.roundValue.bind(this)
+  }
+
+  roundValue(numAsString) {
+    return 
   }
 
   buttonClick(e) {
-    let buttonClicked = e.target.children[0].value
+    
+    let buttonClicked = e.target.tagName === 'SPAN' ? e.currentTarget.textContent : e.target.children[0].value
     let numbers = ['.','1','2','3','4','5','6','7','8','9','0']
     let operations = ['+', '-', '*', '/']
 
