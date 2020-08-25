@@ -1,6 +1,9 @@
 .navbar {
   width: 100%;
   background-color: #242526;
+  height: 4em;
+  display: flex;
+  align-items: stretch;
 }
 
 .navbar-contents {
@@ -10,18 +13,24 @@
   align-items: center;
   width: 75%;
   margin: 0 auto 0 auto;
-  padding: .5em;
 }
 
-.navbar-contents ul {
+.list {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  height: 100%;
+}
+
+.list-item {
   display: flex;
   flex-direction: row;
   align-items: center;
-  margin: 0;
-}
-
-.navbar-contents ul li {
+  justify-content: center;
   list-style: none;
+  height: 95%;
 }
 
 .pageLinks {
@@ -33,7 +42,7 @@
 
 .pageLinks:hover {
   cursor: pointer;
-  color: #4092FD;
+  color: #;
 }
 
 #homeLink {
@@ -49,4 +58,8 @@
 
 .navbar-contents p:hover {
   cursor: pointer;
+}
+
+.active {
+  border-bottom: solid 2px #4092FD;
 }

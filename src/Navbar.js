@@ -8,13 +8,13 @@ function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar-contents">
-        <p>
+        <p className='home'>
           <Link id="homeLink" to="/">Just Another...</Link>
         </p>
-        <ul>
-          <li><Link className="pageLinks" to="/Calculator">Calculator</Link></li>
+        <ul className='list'>
+          <li className='list-item active'><Link className="pageLinks" to="/Calculator">Calculator</Link></li>
           
-          <li><Link className="pageLinks" to="/Stopwatch">Stopwatch</Link></li>
+          <li className='list-item'><Link className="pageLinks" to="/Stopwatch">Stopwatch</Link></li>
         </ul>
       </div>
     </nav>
