@@ -1,6 +1,7 @@
 import React from 'react';
 import {
-  Link
+  Link,
+  NavLink
 } from "react-router-dom";
 import './Navbar.css'
 
@@ -12,9 +13,9 @@ function Navbar() {
           <Link id="homeLink" to="/">Just Another...</Link>
         </p>
         <ul className='list'>
-          <li className='list-item active'><Link className="pageLinks" to="/Calculator">Calculator</Link></li>
+          <li className='list-item'><NavLink activeClassName='active' className="pageLinks" to="/Calculator">Calculator</NavLink></li>
           
-          <li className='list-item'><Link className="pageLinks" to="/Stopwatch">Stopwatch</Link></li>
+          <li className='list-item'><NavLink activeClassName='active' className="pageLinks" to="/Stopwatch">Stopwatch</NavLink></li>
         </ul>
       </div>
     </nav>
