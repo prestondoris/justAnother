@@ -44,9 +44,10 @@
   justify-content: center;
 }
 
-.pageLinks:hover {
+.list-item:hover {
   cursor: pointer;
-  color: #;
+  background-color: #3A3B3C;
+  border-radius: 10px;
 }
 
 #homeLink {
@@ -66,4 +67,5 @@
 
 .active {
   border-bottom: solid 2px #4092FD;
+  background-color: #242526;
 }
