@@ -117,25 +117,37 @@ class Calculator extends Component {
 
   render() {
     let values = ['C', '+ / -', '%', '*',
-                        '7', '8', '9', '/',
-                        '4', '5', '6', '+',
-                        '1', '2', '3', '-',
-                        '0', '.', '=']
+                  '7', '8', '9', '/',
+                  '4', '5', '6', '+',
+                  '1', '2', '3', '-',
+                  '0', '.', '=']
 
     let calcButtons = values.map((val, ind) => {
-      if (ind === 16) {
+      
+      if ('0123456789.'.indexOf(val) > -1) {
+        let extraClass = 'btn-num'
+        if(val === '0') {
+          extraClass += ' zero'
+        }
         return <CalculatorButton 
-                  classes='b17 area' 
+                  extraClass={extraClass} 
                   buttonClick={this.buttonClick} 
                   val={val} 
                   key={ind} 
                 /> 
+      } else if(val === '=') {
+        return <CalculatorButton
+                  extraClass='equals'
+                  buttonClick={this.buttonClick}
+                  val={val}
+                  key={ind}
+                /> 
       } else {
-        return <CalculatorButton 
-                  classes='area' 
-                  buttonClick={this.buttonClick} 
-                  val={val} 
-                  key={ind} 
+        return <CalculatorButton
+                  extraClass='btn-op'
+                  buttonClick={this.buttonClick}
+                  val={val}
+                  key={ind}
                 /> 
       }
     })
@@ -143,7 +155,7 @@ class Calculator extends Component {
     return (
       <main>
         <CalculatorHeader 
-            mainClass='header area' 
+            mainClass='header' 
             operationClass='operation'
             displayClass='display'
             fullOperation={this.state.fullOperation} 

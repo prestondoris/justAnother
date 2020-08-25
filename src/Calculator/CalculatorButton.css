@@ -1,0 +1,37 @@
+.btn {
+  margin: 1px;
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  font-size: x-large;
+
+}
+
+.btn-num {
+  background-color: #f7f7f5;
+  font-weight: 600;
+}
+
+.btn-num:hover{
+  background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+}
+
+.btn-op {
+  background-color: #dedede;
+}
+
+.btn-op:hover{
+  background-image: linear-gradient(315deg, #d9d9d9 0%, #f6f2f2 74%);
+}
+
+.equals {
+  background-color: #5ccbff;
+}
+.equals:hover {
+  background-color: #57bbeb;
+}
+
+.zero {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

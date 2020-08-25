@@ -1,24 +1,12 @@
-main {
-  display: grid;
-  grid-template-columns: 100px 100px 100px 100px;
-  grid-template-rows: 125px 100px 100px 100px 100px 100px;
-}
-
 .header {
   grid-area: 'header';
   grid-column-start: 1;
   grid-column-end: 5;
   grid-row-start: 1;
   grid-row-end: 1;
-}
-
-.b17 {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.area {
-  border: solid black 1px;
+  background-color: #f7f7f5;
+  border-radius: 5px;
+  padding-right: 15px;
 }
 
 .operation {

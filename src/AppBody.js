@@ -1,6 +1,6 @@
 import React from 'react'
-import Stopwatch from './Stopwatch'
-import CalculatorPage from './CalculatorPage'
+import StopwatchPage from './Stopwatch'
+import CalculatorPage from './Calculator'
 import Home from './Home'
 import {
   Switch,
@@ -27,7 +27,7 @@ function AppBody() {
           <CalculatorPage />
         </Route>
         <Route path="/Stopwatch">
-          <Stopwatch />
+          <StopwatchPage />
         </Route>
       </Switch>
     </div>

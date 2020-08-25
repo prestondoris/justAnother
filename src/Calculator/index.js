@@ -1,7 +1,7 @@
 import React from 'react'
 import Calculator from './Calculator'
 
-function CalculatorPage() {
+function index() {
   return (
     <div>
       <Calculator />
@@ -9,4 +9,4 @@ function CalculatorPage() {
   );
 }
 
-export default CalculatorPage
+export default index
