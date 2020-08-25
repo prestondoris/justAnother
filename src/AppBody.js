@@ -18,18 +18,20 @@ import './AppBody.css'
 */
 function AppBody() {
   return (
-    <div className='pageContents'>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/Calculator">
-          <CalculatorPage />
-        </Route>
-        <Route path="/Stopwatch">
-          <StopwatchPage />
-        </Route>
-      </Switch>
+    <div style={{backgroundColor: '#18191A'}}>
+      <div  className='pageContents'>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/Calculator">
+            <CalculatorPage />
+          </Route>
+          <Route path="/Stopwatch">
+            <StopwatchPage />
+          </Route>
+        </Switch>
+      </div>
     </div>
   )
 }

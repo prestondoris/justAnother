@@ -159,7 +159,7 @@ class Calculator extends Component {
     })
 
     return (
-      <main>
+      <main className='calc'>
         <CalculatorHeader 
             mainClass='header' 
             operationClass='operation'

@@ -1,11 +1,10 @@
-main {
+.calc {
   display: grid;
   grid-template-columns: 100px 100px 100px 100px;
   grid-template-rows: 125px 100px 100px 100px 100px 100px;
   border-radius: 5px;
-  border: solid #9c9c9c 1px;
+  border: solid #4092FD 1px;
   box-shadow: 0 0 3px 3px #ededed;
   background-color: #d1d1d1;
-  opacity: 0.8;
 }
 

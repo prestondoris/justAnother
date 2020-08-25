@@ -19,9 +19,9 @@ import Navbar from './Navbar'
 
 function App() {
   return (
-    <Router>
+    <Router style={{backgroundColor: '#18191A'}}>
       <Navbar style={{position: 'fixed'}} />
-      <AppBody />
+      <AppBody  />
     </Router>
   );
 }

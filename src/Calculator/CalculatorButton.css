@@ -4,11 +4,10 @@
   align-items: center;
   justify-content: center;
   font-size: x-large;
-
 }
 
 .btn-num {
-  background-color: #f7f7f5;
+  background-color: white;
   font-weight: 600;
 }
 
@@ -25,10 +24,11 @@
 }
 
 .equals {
-  background-color: #5ccbff;
+  background-color: #4092FD;
+  opacity: 0.8;
 }
 .equals:hover {
-  background-color: #57bbeb;
+  background-image: linear-gradient(315deg, #4092FD 0%, #57bbeb 74%);
 }
 
 .zero {
