@@ -18,7 +18,13 @@ class Calculator extends Component {
   }
 
   roundValue(numAsString) {
-    return 
+    if( numAsString[numAsString.length - 1] === '.'){
+      if(numAsString.length > 9) return numAsString.slice(0,9)
+    } else {
+      if(numAsString.length > 10) return numAsString.slice(0,10)
+    }
+    return numAsString
+
   }
 
   buttonClick(e) {
@@ -29,10 +35,10 @@ class Calculator extends Component {
 
     if(numbers.indexOf(buttonClicked) > -1) {
       if(this.state.lastButtonClicked === 'equals') {
-        let displayValue = buttonClicked
+        let displayValue = this.roundValue(buttonClicked)
         this.setState({inputValues: [], displayValue, fullOperation: '', lastButtonClicked: 'number'})
       } else {
-        let displayValue = this.state.displayValue === '0' ? buttonClicked : this.state.displayValue + buttonClicked
+        let displayValue = this.state.displayValue === '0' ? this.roundValue(buttonClicked) : this.roundValue(this.state.displayValue + buttonClicked)
         this.setState({ displayValue, lastButtonClicked: 'number' })
       }
 
@@ -73,9 +79,10 @@ class Calculator extends Component {
     }else if (buttonClicked === '=') {
       let inputValues = this.state.inputValues.map(val => val)
       inputValues.push(Number(this.state.displayValue))
-      let answer = this.performOperation(inputValues)
-      let fullOperation = this.state.fullOperation + this.state.displayValue + '=' + answer
-      this.setState({ displayValue: `${answer}`, fullOperation, inputValues: [], lastButtonClicked: 'equals' })
+      let answer = this.performOperation(inputValues) + ''
+      let ansStr = answer.indexOf('.') > -1 ? Number(answer).toFixed(1) : answer
+      let fullOperation = this.state.fullOperation + this.state.displayValue + '=' + ansStr
+      this.setState({ displayValue: `${ansStr}`, fullOperation, inputValues: [], lastButtonClicked: 'equals' })
 
     } else if(buttonClicked === 'C') {
       this.setState({
