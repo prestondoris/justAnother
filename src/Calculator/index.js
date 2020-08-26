@@ -3,7 +3,7 @@ import Calculator from './Calculator'
 
 function index() {
   return (
-    <div>
+    <div style={{paddingTop: '3rem'}}>
       <Calculator />
     </div>
   );

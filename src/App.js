@@ -2,9 +2,6 @@ import React from "react";
 import {
   BrowserRouter as Router
 } from "react-router-dom";
-
-// You can think of these components as "pages"
-// in your app.
 import AppBody from './AppBody'
 import Navbar from './Navbar'
 

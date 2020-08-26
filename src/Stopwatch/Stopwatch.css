@@ -2,19 +2,19 @@
   width: 50em;
   height: 300px;
   border-radius: 20px;
-  border: solid 1px #cfcfcf;
   margin: 0 auto 0 auto;
   display: flex;
   flex-direction: column;
+  background-color: #242526;
 }
 
 #timerBox header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  border-bottom: solid 1px #cfcfcf;
-  height: 15%;
-  color: #7510F6;
+  border-bottom: solid 1px #3D4042;
+  height: 20%;
+  color: #4092FD;
   font-size: 2em;
 }
 
@@ -24,7 +24,8 @@
   flex-direction: row;
   align-items: flex-end;
   font-size: 8em;
-  height: 70%;
+  height: 60%;
+  color: #B0B3B8;
 }
 
 #timerBox footer {
@@ -32,17 +33,39 @@
   justify-content: left;
   flex-direction: row;
   align-items: flex-end;
-  border-top: solid 1px #cfcfcf;
-  height: 15%;
+  border-top: solid 1px #3D4042;
+  height: 20%;
 }
 
 button {
-  font-size: 1.25em;
   display: inline-block;
-  width: 5em;
-  height: 1.5em;
-  border: solid 1px #cfcfcf;
+  border: none;
+  padding: .5rem 2rem .5rem 2rem;
+  margin: 0;
+  text-decoration: none;
+  background: #3A3B3C;
+  color: #4092FD;
+  font-family: sans-serif;
+  font-size: 1rem;
+  cursor: pointer;
+  text-align: center;
+  margin: 1em;
   border-radius: 5px;
-  margin: .25em .5em .25em .5em;
-  box-shadow: none;
+  transition: background 250ms ease-in-out, 
+              transform 150ms ease;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+button:hover {
+  background: #4E4F50;
+}
+
+button:focus {
+  outline: none;
+  outline-offset: -4px;
+}
+
+button:active {
+  transform: scale(0.99);
 }

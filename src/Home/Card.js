@@ -8,21 +8,23 @@ function Card({cards}) {
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
-    justifyContent: 'space-between',
+    justifyContent: 'space-around',
   }
   let cardStyles = {
     width: '200px',
-    height: '200px',
+    height: '100px',
     display: 'flex',
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-around',
     borderRadius: '10px',
-    boxShadow: '0px 0px 10px #cfcfcf',
-    textDecoration: 'none'
+    textDecoration: 'none',
+    backgroundColor: '#242626',
+    border: 'solid 1px #3D4042'
+    
   }
   let linkStyles = {
-    color: '#7510F6',
+    color: '#B0B3B8',
     fontSize: '1.5em'
   }
   let card = cards.map((card,ind) => (

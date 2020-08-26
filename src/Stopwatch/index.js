@@ -3,7 +3,7 @@ import Stopwatch from './Stopwatch.js'
 
 function index() {
   return (
-    <div>
+    <div style={{ paddingTop: '3rem' }}>
       <Stopwatch />
     </div>
   )

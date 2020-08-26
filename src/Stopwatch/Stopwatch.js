@@ -94,8 +94,8 @@ class Stopwatch extends Component {
         <main onChange={this.updateTimerVal}>{this.state.timerVal}</main>
         <footer>
           <div>
-            <button style={{backgroundColor: this.state.startStopButtonColor}} onClick={this.startStopTimer}>{this.state.startStopButtonVal}</button>
-            <button style={{backgroundColor: '#cfcfcf'}} onClick={this.resetTimer}>Reset</button>
+            <button onClick={this.startStopTimer}>{this.state.startStopButtonVal}</button>
+            <button onClick={this.resetTimer}>Reset</button>
           </div>
         </footer>
       </div>

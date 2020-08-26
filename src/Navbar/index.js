@@ -5,7 +5,7 @@ import {
 } from "react-router-dom";
 import './Navbar.css'
 
-function Navbar() {
+function Index() {
   return (
     <nav className="navbar">
       <div className="navbar-contents">
@@ -22,4 +22,4 @@ function Navbar() {
   )
 }
 
-export default Navbar
+export default Index
