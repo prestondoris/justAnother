@@ -14,6 +14,11 @@
   background-image: linear-gradient(to top, #242526 40%, #3D4042 200%, #4E4F50);
 }
 
+.jumbotron h1 {
+  font-weight: normal;
+  font-size: 3em;
+}
+
 .card-list {
   width: 50%;
   margin: 3em auto 0 auto;

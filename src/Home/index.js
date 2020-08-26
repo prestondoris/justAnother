@@ -8,8 +8,7 @@ function Index() {
   return (
     <div className='container'>
       <div className='jumbotron'>
-        <h2>UtilWeb.io</h2>
-        <p>Utilities for the Web</p>
+        <h1>Utilities on the Web</h1>
         <img src={landingLogo} alt='code stencil' />
       </div>
       <div className='card-list'>
