@@ -11,9 +11,9 @@ function Index() {
         <h1>Utilities on the Web</h1>
         <img src={landingLogo} alt='code stencil' />
       </div>
-      <div className='card-list'>
+      {/* <div className='card-list'>
         <Cards cards={cards} />
-      </div>
+      </div> */}
       
     </div>
   );
