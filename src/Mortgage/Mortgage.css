@@ -1,0 +1,74 @@
+#mortgageBox {
+  width: 50em;
+  height: 300px;
+  border-radius: 20px;
+  margin: 0 auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  background-color: #242526;
+}
+
+#mortgageBox header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  border-bottom: solid 1px #3D4042;
+  height: 20%;
+  color: #4092FD;
+  font-size: 2em;
+}
+
+#mortgageBox main {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+  align-items: center;
+  height: 60%;
+  color: #B0B3B8;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.inputGroup label {
+  margin-bottom: 1rem;
+}
+
+.mortgageAmounts {
+  display: flex;
+  flex-direction: column;
+}
+
+.mortgageAmounts span {
+  margin: 0 0 .5rem .5rem;
+  color: #B0B3B8
+}
+.top-spacer {
+  padding-left: 1rem;
+}
+.bottom-spacer {
+  padding-left: 4.75rem;
+}
+#mortgageBox footer {
+  display: flex;
+  justify-content: left;
+  flex-direction: row;
+  align-items: flex-end;
+  border-top: solid 1px #3D4042;
+  height: 20%;
+}
+
+input {
+  outline: 0;
+  border-width: 0 0 2px;
+  border-color: #B0B3B8;
+  background-color: transparent;
+  color: #B0B3B8;
+  font-size: 1rem;
+  padding-bottom: .25rem;
+}
+input:focus {
+  border-color:#4092FD
+}

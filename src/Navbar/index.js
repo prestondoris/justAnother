@@ -16,6 +16,8 @@ function Index() {
           <li className='list-item'><NavLink activeClassName='active' className="pageLinks" to="/Calculator">Calculator</NavLink></li>
           
           <li className='list-item'><NavLink activeClassName='active' className="pageLinks" to="/Stopwatch">Stopwatch</NavLink></li>
+
+          <li className='list-item'><NavLink activeClassName='active' className="pageLinks" to="/Mortgage">Mortgage</NavLink></li>
         </ul>
       </div>
     </nav>
